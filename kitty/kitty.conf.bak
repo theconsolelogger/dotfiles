@@ -1,0 +1,10 @@
+font_family FiraCode Nerd Font
+font_size 14
+
+enable_audio_bell 0
+
+
+# BEGIN_KITTY_THEME
+# Solarized Light
+include current-theme.conf
+# END_KITTY_THEME
