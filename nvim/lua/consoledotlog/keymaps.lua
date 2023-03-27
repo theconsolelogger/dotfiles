@@ -1,6 +1,6 @@
 -- Space is my leader.
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = ","
 
 -- When text is wrapped, move by terminal rows, not lines, unless a count is provided.
 -- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
@@ -18,14 +18,14 @@ vim.keymap.set('v', 'y', 'myy`y')
 vim.keymap.set('n', 'q:', ':q')
 
 -- Paste replace visual selection without copying it.
-vim.keymap.set('v', 'p', '"_dP')
+-- vim.keymap.set('v', 'p', '"_dP')
 
 -- Easy insertion of a trailing ; or , from insert mode.
 vim.keymap.set('i', ';;', '<Esc>A;')
 vim.keymap.set('i', ',,', '<Esc>A,')
 
 -- Quickly clear search highlighting.
-vim.keymap.set('n', '<Leader>k', ':nohlsearch<CR>')
+vim.keymap.set('n', '<Leader>cs', ':nohlsearch<CR>')
 
 -- Open the current file in the default program (on Mac this should just be just `open`).
 -- vim.keymap.set('n', '<Leader>x', ':!xdg-open %<CR><CR>')
@@ -37,3 +37,8 @@ vim.keymap.set('n', '<A-j>', ':move .+1<CR>==')
 vim.keymap.set('n', '<A-k>', ':move .-2<CR>==')
 vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
+
+-- Navigating buffers
+vim.keymap.set('n', '[b', ':bprevious<CR>')
+vim.keymap.set('n', ']b', ':bnext<CR>')
+vim.keymap.set('n', '<Leader>x', ':bdelete<CR>')
