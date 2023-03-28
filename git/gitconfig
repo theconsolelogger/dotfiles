@@ -6,3 +6,13 @@
     path = ~/.gitconfig_local
 [init]
     defaultBranch = main
+[push]
+    autoSetupRemote = true
+[alias]
+    ci = commit
+    f = fetch
+    lg = log --pretty=oneline
+    p = pull
+    po = push origin
+    s = status
+    sw = switch
