@@ -53,18 +53,18 @@ use({
 })
 
 -- Git integration
-use({
-  'lewis6991/gitsigns.nvim',
-  config = function()
-    local git_signs = require('gitsigns').setup({ current_line_blame = true })
-    vim.keymap.set('n', ']h', git_signs.next_hunk)
-    vim.keymap.set('n', '[h', git_signs.prev_hunk)
-    vim.keymap.set('n', '<localleader>gs', git_signs.stage_hunk)
-    vim.keymap.set('n', '<localleader>gS', git_signs.undo_stage_hunk)
-    vim.keymap.set('n', '<localleader>gp', git_signs.preview_hunk)
-    vim.keymap.set('n', '<localleader>gb', git_signs.blame_line)
-  end,
-})
+-- use({
+--   'lewis6991/gitsigns.nvim',
+--   config = function()
+--     local git_signs = require('gitsigns').setup({ current_line_blame = true })
+--     vim.keymap.set('n', ']h', git_signs.next_hunk)
+--     vim.keymap.set('n', '[h', git_signs.prev_hunk)
+--     vim.keymap.set('n', '<localleader>gs', git_signs.stage_hunk)
+--     vim.keymap.set('n', '<localleader>gS', git_signs.undo_stage_hunk)
+--     vim.keymap.set('n', '<localleader>gp', git_signs.preview_hunk)
+--     vim.keymap.set('n', '<localleader>gb', git_signs.blame_line)
+--   end,
+-- })
 
 -- Git commands
 use({
@@ -96,6 +96,7 @@ use({
     'b0o/schemastore.nvim',
     'jose-elias-alvarez/null-ls.nvim',
     'jayp0521/mason-null-ls.nvim',
+    'phpactor/phpactor',
   },
   config = function()
     require('consoledotlog/plugins/lspconfig')
@@ -103,15 +104,15 @@ use({
 })
 
 -- PHP Refactoring Tools
-use({
-  'phpactor/phpactor',
-  ft = 'php',
-  run = 'composer install --no-dev --optimize-autoloader',
-  config = function()
-    vim.keymap.set('n', '<Leader>pm', ':PhpactorContextMenu<CR>')
-    vim.keymap.set('n', '<Leader>pn', ':PhpactorClassNew<CR>')
-  end,
-})
+-- use({
+--   'phpactor/phpactor',
+--   ft = 'php',
+--   run = 'composer install --no-dev --optimize-autoloader',
+--   config = function()
+--     vim.keymap.set('n', '<Leader>pm', ':PhpactorContextMenu<CR>')
+--     vim.keymap.set('n', '<Leader>pn', ':PhpactorClassNew<CR>')
+--   end,
+-- })
 
 -- A Status line
 use({

@@ -5,6 +5,7 @@ vim.opt.softtabstop = 4
 
 vim.opt.smartindent = true
 
+vim.opt.colorcolumn = '80,120'
 vim.opt.wrap = false
 
 -- Line number settings

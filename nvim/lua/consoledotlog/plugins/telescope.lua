@@ -36,7 +36,7 @@ require('telescope').setup({
       prompt_title = 'History',
     },
     lsp_references = {
-      previewer = false,
+      previewer = true,
     },
     git_status = {
         git_staging = true
