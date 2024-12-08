@@ -1,0 +1,20 @@
+[core]
+    editor = nvim
+[include]
+    path = ~/.gitconfig_local
+[init]
+    defaultBranch = main
+[push]
+    autoSetupRemote = true
+[alias]
+    ci = commit
+    f = fetch
+    lg = log --pretty=oneline
+    pl = pull
+    ph = push origin
+    s = status
+    sw = switch
+[commit]
+    gpgsign = true
+[tag]
+    gpgSign = true
