@@ -1,9 +1,18 @@
 return {
   "stevearc/conform.nvim",
-  optional = true,
   opts = {
+    default_format_opts = {
+      timeout_ms = 5000,
+    },
     formatters_by_ft = {
-      php = { "php_cs_fixer" },
+      php = { "pint" },
+    },
+    formatters = {
+      pint = {
+        command = "./vendor/bin/pint",
+        args = { "--quiet", "--dirty" },
+        stdin = false,
+      },
     },
   },
 }
