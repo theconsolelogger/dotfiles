@@ -12,7 +12,9 @@ echo 'Installing Homebrew packages...'
 brew install fish \
     neovim \
     ripgrep \
-    pinentry-mac
+    pinentry-mac \
+    wget \
+    lazygit
 
 echo 'Installed Homebrew packages.'
 
