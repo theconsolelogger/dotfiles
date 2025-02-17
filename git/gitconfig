@@ -12,9 +12,6 @@
     lg = log --pretty=oneline
     pl = pull
     ph = push origin
+    phf = push origin --force
     s = status
     sw = switch
-[commit]
-    gpgsign = true
-[tag]
-    gpgSign = true
